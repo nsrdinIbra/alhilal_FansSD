@@ -125,7 +125,7 @@ img:hover {
     position: relative;
     background:
         linear-gradient(rgba(0, 25, 80, 0.68), rgba(0, 51, 153, 0.72)),
-        url("h.jpeg") center / cover no-repeat;
+        url("h.jpg") center / cover no-repeat;
     color: var(--white);
     padding: 95px 0;
     text-align: center;
