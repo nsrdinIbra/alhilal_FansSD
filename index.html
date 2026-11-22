@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمهور الهلال السوداني | Alhilal SD Fans</title>
+    <meta name="description" content="الموقع الرسمي لجمهور نادي الهلال السوداني (Alhilal SD Fans) - أخبار سيد البلد، جدول المباريات، تشكيلة الفريق، ومنتدى عشاق الموج الأزرق.">
+    <meta name="keywords" content="الهلال السوداني, جمهور الهلال السوداني, Alhilal SD Fans, أخبار الهلال, سيد البلد, الموج الأزرق, نادي الهلال للتربية">
+    
+    <!-- خط تجوال العربي من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الهيدر والقائمة العلوية -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="badge">⚽</span>
+                <div>
+                    <h1>جمهور الهلال السوداني</h1>
+                    <small>Alhilal SD Fans</small>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="القائمة">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#news">أخبار الهلال</a>
+                <a href="#matches">المباريات</a>
+                <a href="#squad">تشكيلة الفريق</a>
+                <a href="#fans-zone">صوت الجمهور</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- الواجهة الترحيبية (Hero Section) -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <span class="tagline">سيد البلد • الموج الأزرق</span>
+            <h2>مرحباً بكم في منصة جمهور الهلال السوداني</h2>
+            <p>تغطية شاملة لأخبار نادي الهلال للتربية، نتائج المباريات المحلية والأفريقية، ومساحة حرة لعشاق الأزرق في كل مكان.</p>
+            <div class="hero-buttons">
+                <a href="#news" class="btn btn-primary">آخر الأخبار</a>
+                <a href="#fans-zone" class="btn btn-outline">شارك برأيك</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المباريات -->
+    <section id="matches" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">مباريات سيد البلد</h2>
+            <div class="matches-grid">
+                <div class="match-card upcoming">
+                    <span class="match-status">المباراة القادمة • دوري أبطال أفريقيا</span>
+                    <div class="teams">
+                        <div class="team">
+                            <div class="team-circle blue">الهلال</div>
+                            <strong>الهلال السوداني</strong>
+                        </div>
+                        <div class="match-time">
+                            <span>VS</span>
+                            <small>السبت 9:00 م</small>
+                        </div>
+                        <div class="team">
+                            <div class="team-circle gray">الخصم</div>
+                            <strong>المنافس الأفريقي</strong>
+                        </div>
+                    </div>
+                    <p class="stadium">🏟️ ملعب الجوهرة الزرقاء / ملعب الاستضافة</p>
+                </div>
+
+                <div class="match-card result">
+                    <span class="match-status">نتيجة سابقة • انتهت</span>
+                    <div class="teams">
+                        <div class="team">
+                            <div class="team-circle blue">الهلال</div>
+                            <strong>الهلال السوداني</strong>
+                        </div>
+                        <div class="match-score">
+                            <span>2 - 0</span>
+                            <small>فوز مستحق</small>
+                        </div>
+                        <div class="team">
+                            <div class="team-circle gray">الخصم</div>
+                            <strong>الفريق الضيف</strong>
+                        </div>
+                    </div>
+                    <p class="stadium">⚽ أهداف الموج الأزرق</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأخبار -->
+    <section id="news" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آخر أخبار الهلال</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="africa">أفريقيا</button>
+                    <button class="filter-btn" data-filter="club">أخبار النادي</button>
+                </div>
+            </div>
+            
+            <div class="news-grid" id="newsContainer">
+                <!-- يتم تعبئة الأخبار ديناميكياً عبر ملف script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تشكيلة الفريق -->
+    <section id="squad" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">أبرز نجوم الفريق</h2>
+            <div class="squad-grid" id="squadContainer">
+                <!-- يتم تعبئة اللاعبين عبر script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم صوت الجمهور (تفاعلي) -->
+    <section id="fans-zone" class="section">
+        <div class="container">
+            <h2 class="section-title">صوت جمهور الهلال 🔵⚪</h2>
+            <p class="section-desc">اكتب رسالتك التشجيعية أو تحليلك الفني لمباريات الهلال القادمة:</p>
+            
+            <div class="fan-wall">
+                <form id="fanForm" class="fan-form">
+                    <input type="text" id="fanName" placeholder="اسمك أو لقبك (مثال: هلالابي أصيل)" required>
+                    <textarea id="fanMessage" rows="3" placeholder="اكتب رسالتك للموج الأزرق..." required></textarea>
+                    <button type="submit" class="btn btn-primary">نشر الرسالة</button>
+                </form>
+
+                <div class="fan-posts" id="fanPosts">
+                    <!-- التعليقات تظهر هنا -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <h3>جمهور الهلال السوداني | Alhilal SD Fans</h3>
+            <p>موقع جماهيري غير رسمي مخصص لعشاق نادي الهلال السوداني للتربية (تأسس 1930).</p>
+            <p class="copyright">© 2026 جميع الحقوق محفوظة لـ Alhilal SD Fans</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
