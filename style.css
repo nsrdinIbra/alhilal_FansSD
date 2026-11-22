@@ -32,6 +32,16 @@ body {
     margin: 0 auto;
 }
 
+/* حركة التكبير والتحريك عند تمرير المؤشر على أي صورة */
+img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+img:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 43, 128, 0.25);
+}
+
 /* الهيدر */
 .navbar {
     background-color: var(--primary-blue);
@@ -55,15 +65,19 @@ body {
     gap: 12px;
 }
 
-.logo .badge {
-    font-size: 2rem;
-    background: var(--white);
+.logo-img {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    padding: 2px;
+    flex-shrink: 0;
+}
+
+.logo-img:hover {
+    transform: scale(1.12) rotate(-4deg) translateY(-2px);
 }
 
 .logo h1 {
