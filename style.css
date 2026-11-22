@@ -106,12 +106,20 @@ body {
     cursor: pointer;
 }
 
-/* الواجهة الترحيبية */
+/* الواجهة الترحيبية مع خلفية h.jpeg */
 .hero {
-    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    position: relative;
+    background:
+        linear-gradient(rgba(0, 25, 80, 0.68), rgba(0, 51, 153, 0.72)),
+        url("h.jpeg") center / cover no-repeat;
     color: var(--white);
-    padding: 80px 0;
+    padding: 95px 0;
     text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .tagline {
