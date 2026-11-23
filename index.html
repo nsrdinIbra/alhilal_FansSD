@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جمهور الهلال السوداني | Alhilal SD Fans</title>
-    <meta name="description" content="الموقع الرسمي لجمهور نادي الهلال السوداني (Alhilal SD Fans) - أخبار سيد البلد، جدول المباريات، تشكيلة الفريق، ومنتدى عشاق الموج الأزرق.">
-    <meta name="keywords" content="الهلال السوداني, جمهور الهلال السوداني, Alhilal SD Fans, أخبار الهلال, سيد البلد, الموج الأزرق, نادي الهلال للتربية">
+    <meta name="description" content="الموقع الرسمي لجمهور نادي الهلال السوداني (Alhilal SD Fans) - أخبار سيد البلد، مدونات وتحليلات، جدول المباريات، تشكيلة الفريق، ومنتدى عشاق الموج الأزرق.">
+    <meta name="keywords" content="الهلال السوداني, جمهور الهلال السوداني, Alhilal SD Fans, أخبار الهلال, مدونات وتحليلات, سيد البلد, الموج الأزرق, نادي الهلال للتربية">
     
     <!-- خط تجوال العربي من Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,7 @@
             <nav class="nav-links" id="navLinks">
                 <a href="#home" class="active">الرئيسية</a>
                 <a href="#news">أخبار الهلال</a>
+                <a href="#blogs">مدونات وتحليلات</a>
                 <a href="#matches">المباريات</a>
                 <a href="#squad">تشكيلة الفريق</a>
                 <a href="#fans-zone">صوت الجمهور</a>
@@ -42,10 +43,10 @@
         <div class="container hero-content">
             <span class="tagline">سيد البلد • الموج الأزرق</span>
             <h2>مرحباً بكم في منصة جمهور الهلال السوداني</h2>
-            <p>تغطية شاملة لأخبار نادي الهلال للتربية، نتائج المباريات المحلية والأفريقية، ومساحة حرة لعشاق الأزرق في كل مكان.</p>
+            <p>تغطية شاملة لأخبار نادي الهلال للتربية، مدونات وتحليلات فنية، نتائج المباريات المحلية والأفريقية، ومساحة حرة لعشاق الأزرق في كل مكان.</p>
             <div class="hero-buttons">
                 <a href="#news" class="btn btn-primary">آخر الأخبار</a>
-                <a href="#fans-zone" class="btn btn-outline">شارك برأيك</a>
+                <a href="#blogs" class="btn btn-outline">مدونات وتحليلات</a>
             </div>
         </div>
     </section>
@@ -105,6 +106,7 @@
                     <button class="filter-btn active" data-filter="all">الكل</button>
                     <button class="filter-btn" data-filter="africa">أفريقيا</button>
                     <button class="filter-btn" data-filter="club">أخبار النادي</button>
+                    <button class="filter-btn" data-filter="blogs">مدونات وتحليلات</button>
                 </div>
             </div>
             
@@ -114,8 +116,19 @@
         </div>
     </section>
 
+    <!-- قسم مدونات وتحليلات -->
+    <section id="blogs" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">مدونات وتحليلات</h2>
+            <p class="section-desc">تدوينات وقراءات فنية وتحليلات لمباريات وأداء الهلال السوداني.</p>
+            <div class="news-grid" id="blogsContainer">
+                <!-- يتم تعبئة المدونات والتحليلات ديناميكياً عبر ملف hilal.js -->
+            </div>
+        </div>
+    </section>
+
     <!-- قسم تشكيلة الفريق -->
-    <section id="squad" class="section bg-light">
+    <section id="squad" class="section">
         <div class="container">
             <h2 class="section-title">أبرز نجوم الفريق</h2>
             <div class="squad-grid" id="squadContainer">
@@ -125,7 +138,7 @@
     </section>
 
     <!-- قسم صوت الجمهور (تفاعلي) -->
-    <section id="fans-zone" class="section">
+    <section id="fans-zone" class="section bg-light">
         <div class="container">
             <h2 class="section-title">صوت جمهور الهلال 🔵⚪</h2>
             <p class="section-desc">اكتب رسالتك التشجيعية أو تحليلك الفني لمباريات الهلال القادمة:</p>
