@@ -32,11 +32,14 @@ body {
     margin: 0 auto;
 }
 
-/* حركة تكبير هادئة على الصور فقط */
-.hero-content img,
-.news-card-img,
-.logo-img {
-    transition: transform 0.3s ease;
+/* حركة التكبير والتحريك عند تمرير المؤشر على أي صورة */
+img {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+img:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 43, 128, 0.25);
 }
 
 /* الهيدر */
@@ -74,7 +77,7 @@ body {
 }
 
 .logo-img:hover {
-    transform: scale(1.06);
+    transform: scale(1.12) rotate(-4deg) translateY(-2px);
 }
 
 .logo h1 {
@@ -145,6 +148,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
+    /* دورة كاملة 10 ثوانٍ: كل صورة تظهر حوالي 5 ثوانٍ */
     animation: heroBgSwap 10s infinite;
     will-change: transform, opacity;
 }
@@ -256,4 +260,271 @@ body {
     padding: 60px 0;
 }
 
-.bg-
+.bg-light {
+    background-color: var(--light-blue);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 25px;
+    border-right: 5px solid var(--primary-blue);
+    padding-right: 12px;
+}
+
+/* بطاقات المباريات */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.match-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.match-status {
+    display: inline-block;
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.team-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.team-circle.blue { background: var(--primary-blue); }
+.team-circle.gray { background: #6c757d; }
+
+.match-time span, .match-score span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+.stadium {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+/* الأخبار */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--primary-blue);
+    background: var(--white);
+    color: var(--primary-blue);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-btn.active {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-banner {
+    background: linear-gradient(45deg, var(--primary-blue), #3377ff);
+    color: var(--white);
+    padding: 25px 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.news-body {
+    padding: 20px;
+    flex: 1;
+}
+
+.news-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+}
+
+.news-body p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.news-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* تشكيلة الفريق */
+.squad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.player-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--primary-blue);
+}
+
+.player-number {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.player-role {
+    display: inline-block;
+    background: var(--light-blue);
+    color: var(--dark-blue);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 6px;
+}
+
+/* صوت الجمهور */
+.fan-wall {
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
+.fan-form {
+    background: var(--light-blue);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.fan-form input, .fan-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.fan-form .btn-primary {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.fan-post-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-right: 4px solid var(--primary-blue);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+}
+
+.fan-post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+/* الفوتر */
+.footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer p {
+    opacity: 0.85;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+/* احترام تفضيل تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+        animation: none;
+        opacity: 0;
+    }
+    .hero-slide-1 {
+        opacity: 1;
+    }
+}
+
+/* التجاوب مع الهواتف */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        background: var(--dark-blue);
+        padding: 15px;
+    }
+    .nav-links.show { display: flex; }
+    .hero h2 { font-size: 1.8rem; }
+}
