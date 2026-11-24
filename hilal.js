@@ -337,6 +337,85 @@ if (menuToggle && navLinks) {
     });
 }
 
+// إدارة النتيجة والزمن أثناء مباراة الهلال وكييفو الرواندي
+(function initLiveMatchTracker() {
+    const scoreEl = document.getElementById("liveScore");
+    const timeEl = document.getElementById("liveMatchTime");
+    const statusEl = document.querySelector("#kiyovuMatchCard .match-status");
+    const noteEl = document.getElementById("liveMatchNote");
+
+    if (!scoreEl || !timeEl) return;
+
+    let matchState = JSON.parse(localStorage.getItem("alhilal_kiyovu_live")) || {
+        hilalScore: 0,
+        opponentScore: 0,
+        minute: 0,
+        statusLabel: "🔴 مباشر الآن • الدوري الرواندي • الثلاثاء 24 نوفمبر 2026",
+        note: "⏱️ المباراة جارية الآن • الدوري الرواندي",
+        isRunning: true
+    };
+
+    function updateMatchDisplay() {
+        scoreEl.textContent = `${matchState.hilalScore} - ${matchState.opponentScore}`;
+        timeEl.textContent = `${matchState.minute}'`;
+        if (statusEl && matchState.statusLabel) statusEl.textContent = matchState.statusLabel;
+        if (noteEl && matchState.note) noteEl.textContent = matchState.note;
+        localStorage.setItem("alhilal_kiyovu_live", JSON.stringify(matchState));
+    }
+
+    updateMatchDisplay();
+
+    // زيادة دقيقة كل 60 ثانية أثناء لعب المباراة
+    setInterval(() => {
+        if (!matchState.isRunning) return;
+
+        if (matchState.minute === 45) {
+            matchState.isRunning = false;
+            matchState.note = "⏸️ نهاية الشوط الأول • استراحة";
+            updateMatchDisplay();
+            return;
+        }
+
+        if (matchState.minute < 90) {
+            matchState.minute += 1;
+            updateMatchDisplay();
+        } else {
+            matchState.isRunning = false;
+            matchState.note = "✅ نهاية المباراة";
+            if (statusEl) {
+                statusEl.textContent = "انتهت المباراة • الدوري الرواندي • الثلاثاء 24 نوفمبر 2026";
+            }
+            updateMatchDisplay();
+        }
+    }, 60000);
+
+    // لوحة تحكم سريعة للمشرف لتحديث النتيجة والزمن فوراً (تُفتح بالضغط على Ctrl + Shift + M)
+    document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "m") {
+            const newHilal = prompt("نتيجة الهلال:", matchState.hilalScore);
+            if (newHilal === null) return;
+
+            const newOpp = prompt("نتيجة كييفو الرواندي:", matchState.opponentScore);
+            if (newOpp === null) return;
+
+            const newMin = prompt("الدقيقة الحالية (مثال 15 أو 46 أو 90):", matchState.minute);
+            if (newMin === null) return;
+
+            const newNote = prompt("ملاحظة الحالة (مثال: الشوط الأول أو الشوط الثاني أو نهاية المباراة):", matchState.note);
+
+            matchState.hilalScore = Math.max(0, parseInt(newHilal, 10) || 0);
+            matchState.opponentScore = Math.max(0, parseInt(newOpp, 10) || 0);
+            matchState.minute = Math.max(0, Math.min(120, parseInt(newMin, 10) || 0));
+            matchState.isRunning = matchState.minute < 90;
+            if (newNote !== null && newNote.trim() !== "") {
+                matchState.note = newNote.trim();
+            }
+
+            updateMatchDisplay();
+        }
+    });
+})();
+
 // تشغيل الوظائف عند تحميل الصفحة
 renderNews("all");
 renderBlogs();
