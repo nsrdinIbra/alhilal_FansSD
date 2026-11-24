@@ -1,63 +1,18 @@
 // بيانات احتياطية في حال تعذر قراءة news.json محلياً
 const fallbackArticlesData = [
     {
-        id: 6,
-        category: "blogs",
-        categoryLabel: "مدونات وتحليلات",
-        title: "كاس تصدر حكمها النهائي – في نهائي افريقيا",
-        summary: "محكمة التحكيم الرياضية «الكاس» تقرر إلغاء تتويج المغرب بلقب أمم أفريقيا 2025 وإعادة اللقب إلى منتخب السنغال.",
-        content: [
-            "أعلنت محكمة التحكيم الرياضية «الكاس» قرارها النهائي في قضية المغرب والسنغال، وقررت إلغاء تتويج المنتخب المغربي بلقب كأس أمم أفريقيا 2025، وإعادة اللقب إلى المنتخب السنغالي، في تطور جديد أنهى النزاع القانوني بين الطرفين.",
-            "وجاء قرار المحكمة الصادر اليوم الثلاثاء 24 نوفمبر/تشرين الثاني، ليعيد الاعتراف بتتويج «أسود التيرانغا» باللقب القاري، بعد الأزمة التي أعقبت المباراة النهائية أمام المنتخب المغربي وما تبعها من قرارات وعقوبات من الاتحاد الأفريقي لكرة القدم «الكاف».",
-            "محكمة الكاس تقرر إعادة لقب كأس أفريقيا 2025 إلى السنغال",
-            "وقالت المحكمة إنها قررت إلغاء قرار لجنة الاستئناف بالاتحاد الأفريقي لكرة القدم «الكاف»، وإعادة الاعتراف بفوز منتخب السنغال بلقب كأس أمم أفريقيا 2025، مع إلغاء القرار السابق الذي اعتبر «أسود التيرانغا» خاسرين للمباراة النهائية بنتيجة 3-0، ومنح اللقب للمنتخب المغربي"
-        ],
-        author: "مدونة سيد البلد",
-        image: "sng.jpeg",
-        date: "24 نوفمبر 2026"
-    },
-    {
-        id: 5,
-        category: "blogs",
-        categoryLabel: "مدونات وتحليلات",
-        title: "انتصار الهلال على البوليس الرواندي وصعوده للمركز الثالث",
-        summary: "انتصر الهلال على البوليس الرواندي بأداء جيد في الشوطين بهدف أداما كوليبالي من تمريرة أحمد المختار ليرتقي إلى المركز الثالث.",
-        content: [
-            "انتصر الهلال على البوليس الرواندي، أحد أندية النخبة في الدوري الرواندي وصاحب القاعدة الجماهيرية الكبيرة في رواندا، في مباراة عكست حضور الفريق وقوته.",
-            "جاء الانتصار متبوعاً بأداء جيد في الشوطين، حيث نجح الفريق في الحفاظ على توازنه وانضباطه الفني حتى صافرة النهاية.",
-            "أحرز المالي أداما كوليبالي هدف المباراة الوحيد بعد تمريرة أحمد المختار السحرية، وبهذا الانتصار ترقى الهلال للمركز الثالث."
-        ],
-        author: "مدونة سيد البلد",
-        image: "h.jpeg",
-        date: "20 نوفمبر 2026"
-    },
-    {
-        id: 4,
-        category: "blogs",
-        categoryLabel: "مدونات وتحليلات",
-        title: "مدونات وتحليلات: قراءة في منظومة الضغط والربط الهجومي للهلال",
-        summary: "تحليل فني وتدوينة حول كيفية صناعة اللعب واستغلال المساحات في الثلث الأخير.",
-        content: [
-            "تعتمد فعالية الهلال هجومياً على سرعة نقل الكرة من مناطق العمق إلى الأطراف وصناعة التفوق العددي.",
-            "الضغط المنظم بعد فقدان الكرة يقلل من خطورة المنافسين ويمنح الفريق استعادة أسرع للكرة."
-        ],
-        author: "مدونة سيد البلد",
-        image: "h.jpeg",
-        date: "23 نوفمبر 2026"
-    },
-    {
-        id: 3,
+        id: 1,
         category: "africa",
-        categoryLabel: "البطولة الأفريقية",
-        title: "جماهير الموج الأزرق تملأ المدرجات وتزف الفريق",
-        summary: "لوحة تشجيعية رائعة رسمتها جماهير الهلال السوداني دعماً لسيد البلد في مشواره القاري.",
+        categoryLabel: "دوري أبطال أفريقيا",
+        title: "الهلال يواصل تحضيراته القوية للمواجهة الأفريقية المرتقبة",
+        summary: "أجرى الفريق مرانه الرئيسي وسط روح معنوية عالية من جميع اللاعبين والجهاز الفني لحصد النقاط الكاملة.",
         content: [
-            "تواصل جماهير الهلال السوداني حضورها المؤثر ودعمها المتواصل للفريق في مختلف المواعيد القارية.",
-            "يشكل الدعم الجماهيري حافزاً إضافياً للاعبين لتقديم أفضل ما لديهم داخل المستطيل الأخضر."
+            "واصل فريق الهلال السوداني تحضيراته الجادة استعداداً للمواجهة الأفريقية المرتقبة وسط تركيز عالٍ وانضباط داخل التدريبات.",
+            "ركز الجهاز الفني خلال المران على الجوانب التكتيكية والسرعة في التحول الهجومي وتنظيم الخطوط."
         ],
-        author: "صوت الجماهير",
+        author: "تحرير جمهور الهلال",
         image: "h.jpeg",
-        date: "18 نوفمبر 2026"
+        date: "22 نوفمبر 2026"
     },
     {
         id: 2,
@@ -74,18 +29,32 @@ const fallbackArticlesData = [
         date: "20 نوفمبر 2026"
     },
     {
-        id: 1,
+        id: 3,
         category: "africa",
-        categoryLabel: "دوري أبطال أفريقيا",
-        title: "الهلال يواصل تحضيراته القوية للمواجهة الأفريقية المرتقبة",
-        summary: "أجرى الفريق مرانه الرئيسي وسط روح معنوية عالية من جميع اللاعبين والجهاز الفني لحصد النقاط الكاملة.",
+        categoryLabel: "البطولة الأفريقية",
+        title: "جماهير الموج الأزرق تملأ المدرجات وتزف الفريق",
+        summary: "لوحة تشجيعية رائعة رسمتها جماهير الهلال السوداني دعماً لسيد البلد في مشواره القاري.",
         content: [
-            "واصل فريق الهلال السوداني تحضيراته الجادة استعداداً للمواجهة الأفريقية المرتقبة وسط تركيز عالٍ وانضباط داخل التدريبات.",
-            "ركز الجهاز الفني خلال المران على الجوانب التكتيكية والسرعة في التحول الهجومي وتنظيم الخطوط."
+            "تواصل جماهير الهلال السوداني حضورها المؤثر ودعمها المتواصل للفريق في مختلف المواعيد القارية.",
+            "يشكل الدعم الجماهيري حافزاً إضافياً للاعبين لتقديم أفضل ما لديهم داخل المستطيل الأخضر."
         ],
-        author: "تحرير جمهور الهلال",
+        author: "صوت الجماهير",
         image: "h.jpeg",
-        date: "22 نوفمبر 2026"
+        date: "18 نوفمبر 2026"
+    },
+    {
+        id: 4,
+        category: "blogs",
+        categoryLabel: "مدونات وتحليلات",
+        title: "مدونات وتحليلات: قراءة في منظومة الضغط والربط الهجومي للهلال",
+        summary: "تحليل فني وتدوينة حول كيفية صناعة اللعب واستغلال المساحات في الثلث الأخير.",
+        content: [
+            "تعتمد فعالية الهلال هجومياً على سرعة نقل الكرة من مناطق العمق إلى الأطراف وصناعة التفوق العددي.",
+            "الضغط المنظم بعد فقدان الكرة يقلل من خطورة المنافسين ويمنح الفريق استعادة أسرع للكرة."
+        ],
+        author: "مدونة سيد البلد",
+        image: "h.jpeg",
+        date: "23 نوفمبر 2026"
     }
 ];
 
@@ -117,18 +86,10 @@ function escapeHtml(value) {
 function createArticleCard(item) {
     const card = document.createElement("div");
     card.className = "news-card";
-    const imageSrc = escapeHtml(item.image || "h.jpeg");
-    const safeTitle = escapeHtml(item.title || "");
-
     card.innerHTML = `
         <div class="news-banner">${escapeHtml(item.categoryLabel || item.category || "محتوى")}</div>
-        ${
-            item.image
-                ? `<img src="${imageSrc}" alt="${safeTitle}" class="news-card-img" style="width:100%; height:180px; object-fit:cover;" onerror="this.onerror=null; this.src='h.jpeg';">`
-                : ""
-        }
         <div class="news-body">
-            <h3>${safeTitle}</h3>
+            <h3>${escapeHtml(item.title)}</h3>
             <p>${escapeHtml(item.summary || "")}</p>
             <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:12px;">
                 <span class="news-date">📅 ${escapeHtml(item.date || "")}</span>
@@ -240,7 +201,7 @@ function openArticleModal(article) {
             </small>
             ${
                 article.image
-                    ? `<img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" onerror="this.onerror=null; this.src='h.jpeg';" style="width:100%; max-height:320px; object-fit:cover; border-radius:8px; margin-bottom:16px;">`
+                    ? `<img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" style="width:100%; max-height:320px; object-fit:cover; border-radius:8px; margin-bottom:16px;">`
                     : ""
             }
             <div>${paragraphsHtml}</div>
@@ -336,85 +297,6 @@ if (menuToggle && navLinks) {
         navLinks.classList.toggle("show");
     });
 }
-
-// إدارة النتيجة والزمن أثناء مباراة الهلال وكييفو الرواندي
-(function initLiveMatchTracker() {
-    const scoreEl = document.getElementById("liveScore");
-    const timeEl = document.getElementById("liveMatchTime");
-    const statusEl = document.querySelector("#kiyovuMatchCard .match-status");
-    const noteEl = document.getElementById("liveMatchNote");
-
-    if (!scoreEl || !timeEl) return;
-
-    let matchState = JSON.parse(localStorage.getItem("alhilal_kiyovu_live")) || {
-        hilalScore: 0,
-        opponentScore: 0,
-        minute: 0,
-        statusLabel: "🔴 مباشر الآن • الدوري الرواندي • الثلاثاء 24 نوفمبر 2026",
-        note: "⏱️ المباراة جارية الآن • الدوري الرواندي",
-        isRunning: true
-    };
-
-    function updateMatchDisplay() {
-        scoreEl.textContent = `${matchState.hilalScore} - ${matchState.opponentScore}`;
-        timeEl.textContent = `${matchState.minute}'`;
-        if (statusEl && matchState.statusLabel) statusEl.textContent = matchState.statusLabel;
-        if (noteEl && matchState.note) noteEl.textContent = matchState.note;
-        localStorage.setItem("alhilal_kiyovu_live", JSON.stringify(matchState));
-    }
-
-    updateMatchDisplay();
-
-    // زيادة دقيقة كل 60 ثانية أثناء لعب المباراة
-    setInterval(() => {
-        if (!matchState.isRunning) return;
-
-        if (matchState.minute === 45) {
-            matchState.isRunning = false;
-            matchState.note = "⏸️ نهاية الشوط الأول • استراحة";
-            updateMatchDisplay();
-            return;
-        }
-
-        if (matchState.minute < 90) {
-            matchState.minute += 1;
-            updateMatchDisplay();
-        } else {
-            matchState.isRunning = false;
-            matchState.note = "✅ نهاية المباراة";
-            if (statusEl) {
-                statusEl.textContent = "انتهت المباراة • الدوري الرواندي • الثلاثاء 24 نوفمبر 2026";
-            }
-            updateMatchDisplay();
-        }
-    }, 60000);
-
-    // لوحة تحكم سريعة للمشرف لتحديث النتيجة والزمن فوراً (تُفتح بالضغط على Ctrl + Shift + M)
-    document.addEventListener("keydown", (e) => {
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "m") {
-            const newHilal = prompt("نتيجة الهلال:", matchState.hilalScore);
-            if (newHilal === null) return;
-
-            const newOpp = prompt("نتيجة كييفو الرواندي:", matchState.opponentScore);
-            if (newOpp === null) return;
-
-            const newMin = prompt("الدقيقة الحالية (مثال 15 أو 46 أو 90):", matchState.minute);
-            if (newMin === null) return;
-
-            const newNote = prompt("ملاحظة الحالة (مثال: الشوط الأول أو الشوط الثاني أو نهاية المباراة):", matchState.note);
-
-            matchState.hilalScore = Math.max(0, parseInt(newHilal, 10) || 0);
-            matchState.opponentScore = Math.max(0, parseInt(newOpp, 10) || 0);
-            matchState.minute = Math.max(0, Math.min(120, parseInt(newMin, 10) || 0));
-            matchState.isRunning = matchState.minute < 90;
-            if (newNote !== null && newNote.trim() !== "") {
-                matchState.note = newNote.trim();
-            }
-
-            updateMatchDisplay();
-        }
-    });
-})();
 
 // تشغيل الوظائف عند تحميل الصفحة
 renderNews("all");
