@@ -288,6 +288,11 @@ img:hover {
     text-align: center;
 }
 
+.match-card.live {
+    border: 2px solid #e11d48;
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.14);
+}
+
 .match-status {
     display: inline-block;
     background: var(--light-blue);
@@ -297,6 +302,17 @@ img:hover {
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 15px;
+}
+
+.match-card.live .match-status {
+    background: #ffe4e6;
+    color: #be123c;
+    animation: livePulse 1.6s infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.72; }
 }
 
 .teams {
@@ -326,6 +342,22 @@ img:hover {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--dark-blue);
+}
+
+.match-card.live .match-score span {
+    color: #e11d48;
+    font-size: 1.7rem;
+}
+
+#liveMatchTime {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #ffe4e6;
+    color: #be123c;
+    font-weight: 800;
+    font-size: 0.9rem;
 }
 
 .stadium {
@@ -503,8 +535,11 @@ img:hover {
 
 /* احترام تفضيل تقليل الحركة */
 @media (prefers-reduced-motion: reduce) {
-    .hero-slide {
+    .hero-slide,
+    .match-card.live .match-status {
         animation: none;
+    }
+    .hero-slide {
         opacity: 0;
     }
     .hero-slide-1 {
