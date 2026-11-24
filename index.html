@@ -1,4 +1,64 @@
-<!-- قسم المباريات -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمهور الهلال السوداني | Alhilal SD Fans</title>
+    <meta name="description" content="الموقع الرسمي لجمهور نادي الهلال السوداني (Alhilal SD Fans) - أخبار سيد البلد، مدونات وتحليلات، جدول المباريات، تشكيلة الفريق، ومنتدى عشاق الموج الأزرق.">
+    <meta name="keywords" content="الهلال السوداني, جمهور الهلال السوداني, Alhilal SD Fans, الهلال ضد البوليس الرواندي, الهلال ضد كييفو الرواندي, الهلال ضد حوريا كوناكري الغيني, أخبار الهلال, مدونات وتحليلات, سيد البلد, الموج الأزرق, نادي الهلال للتربية">
+    
+    <!-- خط تجوال العربي من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الهيدر والقائمة العلوية -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="hl.jpg" alt="شعار نادي الهلال السوداني" class="logo-img">
+                <div>
+                    <h1>جمهور الهلال السوداني</h1>
+                    <small>Alhilal SD Fans</small>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="القائمة">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#news">أخبار الهلال</a>
+                <a href="#blogs">مدونات وتحليلات</a>
+                <a href="#matches">المباريات</a>
+                <a href="#squad">تشكيلة الفريق</a>
+                <a href="#fans-zone">صوت الجمهور</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- الواجهة الترحيبية (Hero Section) -->
+    <section id="home" class="hero">
+        <!-- خلفية متبادلة بين h.jpeg و gm.jpg -->
+        <div class="hero-bg-slider" aria-hidden="true">
+            <div class="hero-slide hero-slide-1"></div>
+            <div class="hero-slide hero-slide-2"></div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <span class="tagline">سيد البلد • الموج الأزرق</span>
+            <h2>مرحباً بكم في منصة جمهور الهلال السوداني</h2>
+            <p>تغطية شاملة لأخبار نادي الهلال للتربية، مدونات وتحليلات فنية، نتائج المباريات المحلية والأفريقية، ومساحة حرة لعشاق الأزرق في كل مكان.</p>
+            <div class="hero-buttons">
+                <a href="#news" class="btn btn-primary">آخر الأخبار</a>
+                <a href="#blogs" class="btn btn-outline">مدونات وتحليلات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المباريات -->
     <section id="matches" class="section bg-light">
         <div class="container">
             <h2 class="section-title">مباريات سيد البلد</h2>
@@ -27,9 +87,9 @@
                     <p class="stadium">⚽ الهلال ضد البوليس الرواندي • فوز بهدف نظيف</p>
                 </div>
 
-                <!-- ثانياً: مباراة الهلال ضد كييفو الرواندي • الثلاثاء 24 نوفمبر 2026 (مباشر) -->
-                <div class="match-card live" id="kiyovuMatchCard">
-                    <span class="match-status">🔴 مباشر الآن • الدوري الرواندي • الثلاثاء 24 نوفمبر 2026</span>
+                <!-- ثانياً: المباراة القادمة 1 (الثلاثاء 24 نوفمبر 2026) -->
+                <div class="match-card upcoming">
+                    <span class="match-status">مباراة قادمة • الدوري الرواندي • الثلاثاء 24 نوفمبر 2026</span>
                     <div class="teams">
                         <div class="team">
                             <div class="team-circle blue">
@@ -37,9 +97,9 @@
                             </div>
                             <strong>الهلال السوداني</strong>
                         </div>
-                        <div class="match-score">
-                            <span id="liveScore">0 - 0</span>
-                            <small id="liveMatchTime">00'</small>
+                        <div class="match-time">
+                            <span>VS</span>
+                            <small>الثلاثاء 24 نوفمبر 2026</small>
                         </div>
                         <div class="team">
                             <div class="team-circle gray">
@@ -48,7 +108,7 @@
                             <strong>كييفو الرواندي</strong>
                         </div>
                     </div>
-                    <p class="stadium" id="liveMatchNote">⏱️ المباراة جارية الآن • الدوري الرواندي</p>
+                    <p class="stadium">🏟️ الدوري الرواندي • الهلال ضد كييفو الرواندي</p>
                 </div>
 
                 <!-- ثالثاً: المباراة القادمة 2 (الأحد 29 نوفمبر 2026) -->
@@ -77,3 +137,46 @@
             </div>
         </div>
     </section>
+
+    <!-- قسم الأخبار -->
+    <section id="news" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آخر أخبار الهلال</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="africa">أفريقيا</button>
+                    <button class="filter-btn" data-filter="club">أخبار النادي</button>
+                    <button class="filter-btn" data-filter="blogs">مدونات وتحليلات</button>
+                </div>
+            </div>
+            
+            <div class="news-grid" id="newsContainer">
+                <!-- يتم تعبئة الأخبار ديناميكياً عبر ملف hilal.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مدونات وتحليلات -->
+    <section id="blogs" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">مدونات وتحليلات</h2>
+            <p class="section-desc">تدوينات وقراءات فنية وتحليلات لمباريات وأداء الهلال السوداني.</p>
+            <div class="news-grid" id="blogsContainer">
+                <!-- يتم تعبئة المدونات والتحليلات ديناميكياً عبر ملف hilal.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تشكيلة الفريق -->
+    <section id="squad" class="section">
+        <div class="container">
+            <h2 class="section-title">أبرز نجوم الفريق</h2>
+            <div class="squad-grid" id="squadContainer">
+                <!-- يتم تعبئة اللاعبين عبر hilal.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم صوت الجمهور (تفاعلي) -->
+    <section id="fans
